@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo do IMC</title>
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+            document.write("<br>");
+        }
+
+        function mostra(frase){
+            document.write(frase);
+            pulaLinha();
+        }
+
+        function calcularImc(altura, peso) {
+            return peso / (altura*altura);
+        }
+
+        var imcMarcio = calcularImc(1.89, 101);
+        var imcAmigo = calcularImc(1.75, 92);
+
+        mostra("O valor do IMC é de " + Math.round(imcMarcio));
+        mostra("O valor do IMC é de " + Math.round(imcAmigo));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumo de combustível</title>
+</head>
+<body>
+    <h2>Álcool ou Gasolina?</h2>
+    <script>
+        
+        function pulaLinha(){
+            document.write("<br>");
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+
+        var capacidadeTanque = 40;
+        var kmRodadoGasolina = 480;
+        var kmRodadoAlcool = 300;
+        var mediaGasolina = (kmRodadoGasolina/capacidadeTanque);
+        var mediaAlcool = (kmRodadoAlcool/capacidadeTanque);
+
+        mostra("O consumo médio de Gasolina para rodar " + kmRodadoGasolina + " km" + " foi de " + mediaGasolina + " km por litro.");
+        
+        mostra("O consumo médio de Gasolina para rodar " + kmRodadoAlcool + " km" + " foi de " + mediaAlcool + " km por litro.");
+
+    </script>
+</body>
+</html>

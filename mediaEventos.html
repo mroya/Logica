@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total Gasto com eventos</title>
+</head>
+<body>
+    <script>
+        function pulaLinha() {
+            document.write("<br><br>");
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+
+        var totalDeEventos = parseInt(prompt("Informe o total de eventos no mês:"));
+        var contador = 1;
+        var totalGastoComEventos = 0;
+
+        while(contador <= totalDeEventos) {
+
+            var gasto = parseFloat(prompt("Informe total gasto com evento"));
+
+            totalGastoComEventos = totalGastoComEventos + gasto;
+            
+            contador++;
+        }
+        console.log(totalGastoComEventos);
+        var mediaGastos = totalGastoComEventos / totalDeEventos;
+
+        mostra("A média total de gastos com os eventos é de R$ " + mediaGastos);
+
+
+    </script>
+</body>
+</html>

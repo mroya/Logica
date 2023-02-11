@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advinha Números no Array</title>
+</head>
+<body>
+    <input type="text">
+    <button>Compare com o meu segredo</button>
+    <Script>
+        var numeros = [2,7,10,4];
+        var input = document.querySelector("input");
+        input.focus();
+
+        function verifica(){
+
+            var achou = false;
+            for (var posicao=0; posicao < numeros.length;posicao++) {
+                if(input.value == numeros[posicao]) {
+                    alert("Você acertou!!");
+                    achou = true;
+                    break;
+                }
+            }
+            if(achou == false){
+                alert("Você errou!");
+            }
+            
+            input.value = "";
+            input.focus();
+        }
+
+        var button = document.querySelector("button");
+        button.onclick = verifica;
+
+    </Script>
+</body>
+</html>
